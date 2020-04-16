@@ -51,14 +51,27 @@ public class DisciplinaController {
 	@RequestMapping(value="/disciplina/juntar" ,method = RequestMethod.POST)
 	@ResponseBody
 	public String montarDisciplinaProfessor(@RequestBody JSONObject value) {
+		
+		
 		Usuario valor;
 		Field[] array;
 		array = value.get("user").getClass().getDeclaredFields();
 		
+		String nomeDisciplina;
+		String nomeUsuario;
+		
+		JSONObject juntos = (JSONObject) value.get("disciplina");
+		
+		//juntos = JSONParse(value);
+		
+		System.out.println(juntos.get("nome"));
+		
+		//dis = JSONParse(value);
+		
 		System.out.println(array[1]);
 		//Usuario usuario = new Usuario(valor[0]);
 		
-		System.out.println(array);
+		System.out.println(value);
 		
 		
 		try {

@@ -16,16 +16,16 @@ public class Disciplina implements Serializable {
 	
 	@Id
 	@GeneratedValue
-	private long id;
+	private Integer id;
 	
 	@Column(name= "nome")
 	private String nome;	
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

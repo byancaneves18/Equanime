@@ -23,9 +23,13 @@ public class Usuario implements Serializable {
 		this.cidade = cidade;
 	}
 	
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue
-	private long id;
+	private Integer id;
 	
 	@Column(name= "nome")
 	private String nome;
@@ -51,11 +55,11 @@ public class Usuario implements Serializable {
 	@Column(name="cidade")
 	private String cidade;
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

@@ -19,9 +19,7 @@ public class DisciplinaProfessor implements Serializable {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
-	@Column(name= "nome")
-	private String nome;	
+
 	
 	@Column(name= "periodo")
 	private Integer periodo;
@@ -34,13 +32,7 @@ public class DisciplinaProfessor implements Serializable {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+	
 
 	public Integer getPeriodo() {
 		return periodo;

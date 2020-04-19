@@ -1,5 +1,7 @@
 package com.equanime.equanime.controllers;
 
+import java.util.ArrayList;
+
 import javax.validation.constraints.Null;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,15 @@ public class UsuarioController {
 	@ResponseBody
 	public String process() {
 		return "Trenzin";
+	}
+	
+	@RequestMapping(value="/usuario/listar", method = RequestMethod.GET)
+	@ResponseBody
+	public  ArrayList listar() {
+		ArrayList lista;
+		lista = (ArrayList) repository.findAll(); 
+		
+		return lista;
 	}
 	
 	@RequestMapping(value="/usuario/salvar" ,method = RequestMethod.POST)

@@ -1,6 +1,8 @@
 package com.equanime.equanime.controllers;
 
 
+import java.util.ArrayList;
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -34,6 +36,15 @@ public class DisciplinaController {
 	@ResponseBody
 	public String process() {
 		return "Teste";
+	}
+	
+	@RequestMapping(value="/disciplina/listar", method = RequestMethod.GET)
+	@ResponseBody
+	public  ArrayList listar() {
+		ArrayList lista;
+		lista = (ArrayList) repository.findAll(); 
+		
+		return lista;
 	}
 	
 	@RequestMapping(value="/disciplina/salvar" ,method = RequestMethod.POST)

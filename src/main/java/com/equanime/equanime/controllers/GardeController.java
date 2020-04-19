@@ -1,6 +1,7 @@
 package com.equanime.equanime.controllers;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -30,6 +31,15 @@ public class GardeController {
 	@ResponseBody
 	public String process() {
 		return "Teste";
+	}
+	
+	@RequestMapping(value="/grade/listar", method = RequestMethod.GET)
+	@ResponseBody
+	public  ArrayList listar() {
+		ArrayList lista;
+		lista = (ArrayList) repository.findAll(); 
+		
+		return lista;
 	}
 	
 	@RequestMapping(value="/grade/salvar", method = RequestMethod.POST)
